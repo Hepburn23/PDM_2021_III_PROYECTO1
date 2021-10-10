@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PDM_2021_III_P1_PROYECTO1">
         <activity
+            android:name=".ProductoPorCodigoActivity"
+            android:exported="true" />
+        <activity
             android:name=".ClientesActivity"
             android:exported="true" />
         <activity

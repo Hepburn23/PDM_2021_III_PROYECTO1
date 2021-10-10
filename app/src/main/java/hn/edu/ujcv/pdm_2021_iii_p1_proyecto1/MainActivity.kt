@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_producto_por_codigo.*
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,6 +20,10 @@ class MainActivity : AppCompatActivity() {
             clientActivity()
         }
 
+        btnProdPerCode.setOnClickListener {
+            prodPerCodeActivity()
+        }
+
     }
 
     //FUNCIONES
@@ -30,6 +35,11 @@ class MainActivity : AppCompatActivity() {
 
     fun clientActivity(){
         val intent = Intent(this,ClientesActivity::class.java)
+        startActivity(intent)
+    }
+
+    fun prodPerCodeActivity(){
+        val intent = Intent(this,ProductoPorCodigoActivity::class.java)
         startActivity(intent)
     }
 
