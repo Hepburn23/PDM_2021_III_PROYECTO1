@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PDM_2021_III_P1_PROYECTO1">
         <activity
+            android:name=".FacturasPorIdentidadActivity"
+            android:exported="true" />
+        <activity
+            android:name=".FacturasDeVentasActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ClientesPorIdentidadActivity"
+            android:exported="true" />
+        <activity
             android:name=".ProductoPorCodigoActivity"
             android:exported="true" />
         <activity

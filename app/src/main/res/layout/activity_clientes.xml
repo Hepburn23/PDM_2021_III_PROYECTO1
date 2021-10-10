@@ -10,7 +10,7 @@
         android:id="@+id/txvprobando"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="38dp"
+        android:layout_marginTop="33dp"
         android:text="ESTA ES LA ACTIVITY DE CLIENTES"
         app:layout_constraintStart_toStartOf="@+id/txtId"
         app:layout_constraintTop_toTopOf="parent" />
@@ -20,9 +20,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="33dp"
+        android:layout_marginTop="101dp"
+        android:layout_marginBottom="104dp"
         android:text="Identidad"
-        app:layout_constraintBaseline_toBaselineOf="@+id/txtId"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintBottom_toTopOf="@+id/txtBirthDate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/txvClientName"
@@ -58,7 +61,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="33dp"
-        android:layout_marginTop="57dp"
+        android:layout_marginTop="58dp"
         android:text="Correo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txvDateOfAdmission" />
@@ -68,12 +71,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="2dp"
-        android:layout_marginBottom="15dp"
         android:ems="10"
         android:hint="digite su identidad"
         android:inputType="number"
         android:minHeight="48dp"
-        app:layout_constraintBottom_toTopOf="@+id/txtClientName"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txvId"
         app:layout_constraintStart_toEndOf="@+id/txvId" />
 
     <EditText
@@ -81,14 +83,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="1dp"
-        android:layout_marginBottom="28dp"
+        android:layout_marginTop="15dp"
         android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
         android:ems="10"
         android:hint="Escriba su Nombre"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        app:layout_constraintBottom_toTopOf="@+id/txtBirthDate"
-        app:layout_constraintStart_toEndOf="@+id/txvClientName" />
+        app:layout_constraintStart_toEndOf="@+id/txvClientName"
+        app:layout_constraintTop_toBottomOf="@+id/txtId" />
 
     <EditText
         android:id="@+id/txtBirthDate"
@@ -122,4 +124,24 @@
         android:minHeight="48dp"
         app:layout_constraintBottom_toBottomOf="@+id/txvEmail"
         app:layout_constraintStart_toEndOf="@+id/txvEmail" />
+
+    <Button
+        android:id="@+id/btnGuardarCliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="58dp"
+        android:text="Guardar"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnVisualize"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnVisualize"
+        android:layout_width="129dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="74dp"
+        android:text="Visualizar"
+        app:layout_constraintStart_toEndOf="@+id/btnGuardarCliente"
+        app:layout_constraintTop_toBottomOf="@+id/txtEmail" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
