@@ -6,126 +6,145 @@
     android:layout_height="match_parent"
     tools:context=".ProductosActivity">
 
-    <TextView
-        android:id="@+id/txvCode"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="13dp"
-        android:layout_marginBottom="28dp"
-        android:text="Código"
-        app:layout_constraintBottom_toTopOf="@+id/txvName"
-        app:layout_constraintStart_toStartOf="@+id/txvName" />
-
-    <TextView
-        android:id="@+id/txvName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="43dp"
-        android:layout_marginTop="4dp"
-        android:text="Nombre"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/txtName" />
-
-    <TextView
-        android:id="@+id/txvProvider"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="9dp"
-        android:layout_marginEnd="44dp"
-        android:text="Proveedor"
-        app:layout_constraintEnd_toStartOf="@+id/txtName"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/txtProvider" />
-
-    <TextView
-        android:id="@+id/txvPrice"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="45dp"
-        android:text="Precio"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txvProvider" />
-
-    <TextView
-        android:id="@+id/txvStock"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="33dp"
-        android:layout_marginBottom="3dp"
-        android:text="Stock Actual"
-        app:layout_constraintBottom_toBottomOf="@+id/txtStock"
-        app:layout_constraintStart_toStartOf="parent" />
-
     <EditText
-        android:id="@+id/txtCode"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="134dp"
-        android:layout_marginEnd="41dp"
+        android:id="@+id/txtStock"
+        android:layout_width="273dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="40dp"
         android:ems="10"
-        android:hint="Ingrese el codigo de producto"
-        android:inputType="number"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/txtName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="7dp"
-        android:ems="10"
-        android:hint="Ingrese el nombre de producto"
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="@+id/txtCode"
-        app:layout_constraintTop_toBottomOf="@+id/txtCode" />
-
-    <EditText
-        android:id="@+id/txtProvider"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="27dp"
-        android:layout_marginEnd="2dp"
-        android:ems="10"
-        android:hint="Ingrese el proveedor"
+        android:hint="Ingrese el stock actual"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="@+id/txtName"
-        app:layout_constraintTop_toBottomOf="@+id/txtName" />
+        app:layout_constraintEnd_toEndOf="@+id/txtPrice"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/txvStock"
+        app:layout_constraintTop_toBottomOf="@+id/txtPrice" />
 
     <EditText
         android:id="@+id/txtPrice"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="14dp"
-        android:layout_marginEnd="2dp"
+        android:layout_width="274dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="40dp"
         android:ems="10"
         android:hint="Ingrese el precio"
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="@+id/txtProvider"
         app:layout_constraintTop_toBottomOf="@+id/txtProvider" />
 
-    <EditText
-        android:id="@+id/txtStock"
+    <TextView
+        android:id="@+id/txvStock"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="33dp"
-        android:layout_marginEnd="42dp"
-        android:ems="10"
-        android:hint="Ingrese el stock actual"
-        android:inputType="textPersonName"
+        android:text="Stock Actual"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtPrice" />
+        app:layout_constraintHorizontal_bias="0.048"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.688" />
+
+    <TextView
+        android:id="@+id/txvPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Precio"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/txtPrice"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.57" />
+
+    <EditText
+        android:id="@+id/txtProvider"
+        android:layout_width="276dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:hint="Ingrese el proveedor"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/txtName"
+        app:layout_constraintTop_toBottomOf="@+id/txtName" />
+
+    <TextView
+        android:id="@+id/txvProvider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Proveedor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/txtProvider"
+        app:layout_constraintHorizontal_bias="0.275"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.45" />
+
+    <EditText
+        android:id="@+id/txtName"
+        android:layout_width="277dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:hint="Ingrese el nombre de producto"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/txtCode"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtCode" />
+
+    <TextView
+        android:id="@+id/txvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/txtName"
+        app:layout_constraintHorizontal_bias="0.225"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.332" />
+
+    <EditText
+        android:id="@+id/txtCode"
+        android:layout_width="277dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="116dp"
+        android:layout_marginEnd="12dp"
+        android:ems="10"
+        android:hint="Ingrese el codigo de producto"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txvCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Código"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/txtCode"
+        app:layout_constraintHorizontal_bias="0.207"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.209" />
 
     <Button
         android:id="@+id/btnSave"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="74dp"
-        android:layout_marginBottom="104dp"
+        android:layout_width="155dp"
+        android:layout_height="56dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
         android:text="Guardar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/txvShowNameProducts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Productos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

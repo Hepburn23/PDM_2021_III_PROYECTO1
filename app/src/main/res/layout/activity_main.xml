@@ -7,25 +7,18 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/btnProducts"
+        android:id="@+id/btnInvoicePerClientId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Productos"
-        app:layout_constraintBottom_toTopOf="@+id/btnClients"
+        android:scaleX="1"
+        android:scaleY="1"
+        android:text="Facturas de Ventas por Identidad del Cliente"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/btnClients"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Clientes"
-        app:layout_constraintBottom_toTopOf="@+id/btnSellsInvoice"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.683" />
+        app:layout_constraintVertical_bias="0.84" />
 
     <Button
         android:id="@+id/btnSellsInvoice"
@@ -37,7 +30,29 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.752" />
+        app:layout_constraintVertical_bias="0.866" />
+
+    <Button
+        android:id="@+id/btnProducts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Productos"
+        app:layout_constraintBottom_toTopOf="@+id/btnClients"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.689" />
+
+    <Button
+        android:id="@+id/btnClients"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clientes"
+        app:layout_constraintBottom_toTopOf="@+id/btnSellsInvoice"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.809" />
 
     <Button
         android:id="@+id/btnProdPerCode"
@@ -48,7 +63,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.831" />
+        app:layout_constraintVertical_bias="0.903" />
 
     <Button
         android:id="@+id/btnClientsPerId"
@@ -60,17 +75,6 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.876" />
+        app:layout_constraintVertical_bias="0.913" />
 
-    <Button
-        android:id="@+id/btnInvoicePerClientId"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Facturas de Ventas por Identidad del Cliente"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.9" />
 </androidx.constraintlayout.widget.ConstraintLayout>
