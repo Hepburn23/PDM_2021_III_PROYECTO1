@@ -80,6 +80,7 @@
 
     <EditText
         android:id="@+id/txtName"
+        android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
         android:layout_width="277dp"
         android:layout_height="48dp"
         android:layout_marginTop="40dp"
@@ -107,8 +108,8 @@
         android:id="@+id/txtCode"
         android:layout_width="277dp"
         android:layout_height="52dp"
-        android:layout_marginTop="116dp"
-        android:layout_marginEnd="12dp"
+        android:layout_marginTop="128dp"
+        android:layout_marginEnd="40dp"
         android:ems="10"
         android:hint="Ingrese el codigo de producto"
         android:inputType="number"
