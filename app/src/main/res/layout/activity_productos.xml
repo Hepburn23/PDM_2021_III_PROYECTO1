@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#C6EFF4"
     tools:context=".ProductosActivity">
 
     <EditText
@@ -187,9 +188,10 @@
 
     <Button
         android:id="@+id/btnSave"
-        android:layout_width="155dp"
-        android:layout_height="56dp"
+        android:layout_width="177dp"
+        android:layout_height="67dp"
         android:text="Guardar"
+        app:icon="@drawable/save"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

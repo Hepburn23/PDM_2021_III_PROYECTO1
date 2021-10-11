@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#C1F8C3"
     tools:context=".FacturasDeVentasActivity">
 
     <TextView
@@ -130,8 +131,9 @@
         android:id="@+id/btnInvoiceSave"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
+        android:layout_marginStart="16dp"
         android:text="Guardar"
+        app:icon="@drawable/save"
         app:layout_constraintBaseline_toBaselineOf="@+id/btnInvoiceVisualize"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -142,6 +144,7 @@
         android:layout_marginStart="38dp"
         android:layout_marginBottom="54dp"
         android:text="Visualizar"
+        app:icon="@drawable/visualizar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btnInvoiceSave" />
 
