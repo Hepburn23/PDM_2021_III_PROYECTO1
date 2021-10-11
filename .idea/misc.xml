@@ -3,11 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Ricardo/AndroidStudioProjects/PDM_2021_III__P1_PROYECTO1/app/src/main/res/layout/activity_clientes.xml" value="0.36822916666666666" />
-        <entry key="..\:/Users/Ricardo/AndroidStudioProjects/PDM_2021_III__P1_PROYECTO1/app/src/main/res/layout/activity_productos.xml" value="0.36822916666666666" />
-        <entry key="..\:/Users/johnn/AndroidStudioProjects/PDM_2021_III__P1_PROYECTO1/app/src/main/res/layout/activity_clientes.xml" value="0.20260416666666667" />
+        <entry key="..\:/Users/johnn/AndroidStudioProjects/PDM_2021_III__P1_PROYECTO1/app/src/main/res/layout/activity_clientes.xml" value="0.33" />
         <entry key="..\:/Users/johnn/AndroidStudioProjects/PDM_2021_III__P1_PROYECTO1/app/src/main/res/layout/activity_main.xml" value="0.33" />
-        <entry key="..\:/Users/johnn/AndroidStudioProjects/PDM_2021_III__P1_PROYECTO1/app/src/main/res/layout/activity_producto_por_codigo.xml" value="0.25" />
+        <entry key="..\:/Users/johnn/AndroidStudioProjects/PDM_2021_III__P1_PROYECTO1/app/src/main/res/layout/activity_producto_por_codigo.xml" value="0.33" />
         <entry key="..\:/Users/johnn/AndroidStudioProjects/PDM_2021_III__P1_PROYECTO1/app/src/main/res/layout/activity_productos.xml" value="0.33" />
       </map>
     </option>
