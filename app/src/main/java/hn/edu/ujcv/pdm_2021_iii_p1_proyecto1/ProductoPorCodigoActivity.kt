@@ -8,6 +8,7 @@ import kotlinx.android.synthetic.main.activity_producto_por_codigo.*
 
 class ProductoPorCodigoActivity : AppCompatActivity() {
     var valoresProducto: HashMap<Int, String> = hashMapOf()
+    //var productPerCode: HashMap<Int, String> = hashMapOf()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_producto_por_codigo)
@@ -18,16 +19,14 @@ class ProductoPorCodigoActivity : AppCompatActivity() {
         }
     }
     private fun begining(){
-        /*val intent = getIntent()
-        val code = intent.getStringExtra("Code")
-        val name = intent.getStringExtra("Name")
-        val provider = intent.getStringExtra("Provider")
-        val price = intent.getStringExtra("Price")
-        val stock = intent.getStringExtra("Stock")
-
-        txtShowCode.text = */
-
+        var intent = intent
+        valoresProducto = intent.getSerializableExtra("producto") as HashMap<Int, String>
     }
+
+    /*private fun sendproducts(){
+        val intent = Intent(this, ProductoPorCodigoActivity::class.java)
+        intent.putExtra("productos", productPerCode)
+    }*/
 
     private fun searchProduct(){
 
@@ -36,6 +35,8 @@ class ProductoPorCodigoActivity : AppCompatActivity() {
         var provider:String
         var price:String
         var stock:String
+
+
 
         for(valor in valoresProducto){
             val list = valor.toString().split("|", "=")
@@ -52,7 +53,10 @@ class ProductoPorCodigoActivity : AppCompatActivity() {
                 txtShowProvider.setText(provider)
                 txtShowPrice.setText(price)
                 txtShowStock.setText(stock)
-                return
+
+                 return
+
+
             }
         }
         Toast.makeText(this, "No se Encuentra el Codigo Ingresado", Toast.LENGTH_SHORT).show()
