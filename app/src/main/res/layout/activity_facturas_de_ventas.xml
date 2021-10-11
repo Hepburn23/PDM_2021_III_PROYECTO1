@@ -61,10 +61,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginBottom="1dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="20dp"
         android:text="Sub total"
-        app:layout_constraintBottom_toBottomOf="@+id/txtSubTotal"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toStartOf="@+id/txvSubTotal2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txvLedQuantity" />
 
     <EditText
         android:id="@+id/txtInvoiceId"
@@ -124,18 +126,6 @@
         app:layout_constraintBottom_toBottomOf="@+id/txvLedQuantity"
         app:layout_constraintStart_toEndOf="@+id/txvLedQuantity" />
 
-    <EditText
-        android:id="@+id/txtSubTotal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:ems="10"
-        android:hint="Total a pagar"
-        android:inputType="number"
-        android:minHeight="48dp"
-        app:layout_constraintStart_toEndOf="@+id/txvSubTotal"
-        app:layout_constraintTop_toBottomOf="@+id/txvLedQuantity" />
-
     <Button
         android:id="@+id/btnInvoiceSave"
         android:layout_width="wrap_content"
@@ -154,4 +144,14 @@
         android:text="Visualizar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btnInvoiceSave" />
+
+    <TextView
+        android:id="@+id/txvSubTotal2"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="93dp"
+        android:text="Su subtotal es"
+        app:layout_constraintBottom_toBottomOf="@+id/txvSubTotal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txvSubTotal" />
 </androidx.constraintlayout.widget.ConstraintLayout>

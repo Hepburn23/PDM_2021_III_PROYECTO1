@@ -80,10 +80,10 @@
 
     <EditText
         android:id="@+id/txtName"
-        android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
         android:layout_width="277dp"
         android:layout_height="48dp"
         android:layout_marginTop="40dp"
+        android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
         android:ems="10"
         android:hint="Ingrese el nombre de producto"
         android:inputType="text"

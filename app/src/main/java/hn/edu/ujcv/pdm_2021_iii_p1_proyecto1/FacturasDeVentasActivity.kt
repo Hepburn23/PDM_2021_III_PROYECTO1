@@ -2,6 +2,7 @@ package hn.edu.ujcv.pdm_2021_iii_p1_proyecto1
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_clientes.*
@@ -19,6 +20,7 @@ class FacturasDeVentasActivity : AppCompatActivity() {
         setContentView(R.layout.activity_facturas_de_ventas)
         btnInvoiceSave.setOnClickListener{
             save()
+            multi()
         }
         btnInvoiceVisualize.setOnClickListener {
             enviar()
@@ -33,7 +35,6 @@ class FacturasDeVentasActivity : AppCompatActivity() {
             info.append(txtClientId.text.toString().trim()).append("")
             info.append(txtProductCode.text.toString()).append("")
             info.append(txtLedQuantity.text.toString())
-            info.append(txtSubTotal.text.toString())
             facturasV.put(numero, info.toString())
 
             campovacio()
@@ -76,6 +77,11 @@ class FacturasDeVentasActivity : AppCompatActivity() {
 
             }
             return true
+    }
+    fun multi(){
+        var Total= 1000 //(txtPrice*txtLedQuantity)
+        var precioCosas = txtPrice
+        txvSubTotal2.text= "Su subtotal es de: $Total"
     }
 
 }
