@@ -10,9 +10,10 @@
         android:id="@+id/txvprobando"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="33dp"
+        android:layout_marginTop="16dp"
         android:text="ESTA ES LA ACTIVITY DE CLIENTES"
-        app:layout_constraintStart_toStartOf="@+id/txtId"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -20,20 +21,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="33dp"
-        android:layout_marginTop="101dp"
-        android:layout_marginBottom="104dp"
+        android:layout_marginTop="84dp"
+        android:layout_marginBottom="85dp"
         android:text="Identidad"
-        app:layout_constraintBottom_toTopOf="@+id/txtBirthDate"
+        app:layout_constraintBottom_toTopOf="@+id/txvClientName"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/txvprobando" />
 
     <TextView
         android:id="@+id/txvClientName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="33dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginBottom="59dp"
         android:text="Nombre de cliente"
-        app:layout_constraintBaseline_toBaselineOf="@+id/txtClientName"
+        app:layout_constraintBottom_toTopOf="@+id/txtBirthDate"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -41,7 +43,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="33dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="49dp"
         android:text="Fecha de nacimiento"
         app:layout_constraintBottom_toTopOf="@+id/txtDateOfAdmission"
         app:layout_constraintStart_toStartOf="parent" />
@@ -51,46 +53,43 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="33dp"
-        android:layout_marginTop="331dp"
+        android:layout_marginBottom="64dp"
         android:text="Fecha de ingreso"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toTopOf="@+id/txtEmail"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/txvEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="33dp"
-        android:layout_marginTop="58dp"
+        android:layout_marginBottom="192dp"
         android:text="Correo"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txvDateOfAdmission" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/txtId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="2dp"
         android:ems="10"
         android:hint="digite su identidad"
         android:inputType="number"
         android:minHeight="48dp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/txvId"
+        app:layout_constraintBottom_toBottomOf="@+id/txvId"
         app:layout_constraintStart_toEndOf="@+id/txvId" />
 
     <EditText
         android:id="@+id/txtClientName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="15dp"
         android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
         android:ems="10"
         android:hint="Escriba su Nombre"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        app:layout_constraintStart_toEndOf="@+id/txvClientName"
-        app:layout_constraintTop_toBottomOf="@+id/txtId" />
+        app:layout_constraintBottom_toBottomOf="@+id/txvClientName"
+        app:layout_constraintStart_toEndOf="@+id/txvClientName" />
 
     <EditText
         android:id="@+id/txtBirthDate"
@@ -129,17 +128,17 @@
         android:id="@+id/btnGuardarCliente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="58dp"
+        android:layout_marginStart="25dp"
         android:text="Guardar"
         app:layout_constraintBaseline_toBaselineOf="@+id/btnVisualize"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="@+id/txvEmail" />
 
     <Button
         android:id="@+id/btnVisualize"
         android:layout_width="129dp"
         android:layout_height="48dp"
-        android:layout_marginStart="34dp"
-        android:layout_marginTop="74dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="31dp"
         android:text="Visualizar"
         app:layout_constraintStart_toEndOf="@+id/btnGuardarCliente"
         app:layout_constraintTop_toBottomOf="@+id/txtEmail" />
