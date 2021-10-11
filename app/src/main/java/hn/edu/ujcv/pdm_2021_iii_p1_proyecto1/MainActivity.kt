@@ -24,6 +24,17 @@ class MainActivity : AppCompatActivity() {
             prodPerCodeActivity()
         }
 
+        btnSellsInvoice.setOnClickListener {
+            SellsInvoice()
+        }
+
+        btnClientsPerId.setOnClickListener {
+            ClientPerId()
+        }
+        btnInvoicePerClientId.setOnClickListener {
+            InvoicePerClienteId()
+        }
+
 
     }
 
@@ -43,6 +54,21 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this,ProductoPorCodigoActivity::class.java)
         startActivity(intent)
     }
+
+    fun SellsInvoice(){
+        val intent = Intent(this, FacturasDeVentasActivity::class.java)
+        startActivity(intent)
+    }
+    fun ClientPerId(){
+        val intent = Intent(this, ClientesPorIdentidadActivity::class.java)
+        startActivity(intent)
+    }
+    fun InvoicePerClienteId(){
+        val intent = Intent(this, FacturasPorIdentidadActivity::class.java)
+        startActivity(intent)
+    }
+
+
 
 
 }
