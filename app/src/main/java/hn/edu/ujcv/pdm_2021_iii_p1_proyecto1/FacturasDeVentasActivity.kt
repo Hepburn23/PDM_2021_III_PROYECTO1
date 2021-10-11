@@ -35,7 +35,6 @@ class FacturasDeVentasActivity : AppCompatActivity() {
                 btnInvoiceSave.isEnabled = true
                 Toast.makeText(this,"guardado", Toast.LENGTH_SHORT).show()
 
-                limpiezaFacturas()
             }
         }
         fun campovacio() : Boolean {
@@ -71,9 +70,6 @@ class FacturasDeVentasActivity : AppCompatActivity() {
             return true
     }
 
-    private fun limpiezaFacturas() {
-
-            }
 
 }
 

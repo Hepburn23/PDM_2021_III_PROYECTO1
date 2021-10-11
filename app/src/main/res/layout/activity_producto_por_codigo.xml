@@ -35,7 +35,7 @@
         android:id="@+id/btnSearchProdPerCode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="19dp"
+        android:layout_marginEnd="16dp"
         android:layout_marginBottom="564dp"
         android:text="Buscar"
         app:layout_constraintBottom_toBottomOf="parent"

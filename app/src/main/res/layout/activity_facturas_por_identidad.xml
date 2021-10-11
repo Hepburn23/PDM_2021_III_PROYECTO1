@@ -9,13 +9,14 @@
     <SearchView
         android:id="@+id/searchView2"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
-        android:layout_marginTop="180dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="28dp"
         android:layout_marginBottom="30dp"
         app:layout_constraintBottom_toTopOf="@+id/btnSearchInvoicePerId"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -23,10 +24,18 @@
         android:id="@+id/btnSearchInvoicePerId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="28dp"
+        android:layout_marginEnd="64dp"
         android:layout_marginBottom="441dp"
         android:text="Buscar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/searchView2" />
+
+    <Button
+        android:id="@+id/btnAtrasFacturasIdentidad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Atras"
+        tools:layout_editor_absoluteX="71dp"
+        tools:layout_editor_absoluteY="204dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
