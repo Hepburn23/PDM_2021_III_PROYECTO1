@@ -4,58 +4,46 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/teal_200"
     tools:context=".ClientesActivity">
-
-    <TextView
-        android:id="@+id/txvprobando"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="ESTA ES LA ACTIVITY DE CLIENTES"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/txvId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="33dp"
-        android:layout_marginTop="84dp"
-        android:layout_marginBottom="85dp"
+        android:layout_marginStart="37dp"
         android:text="Identidad"
-        app:layout_constraintBottom_toTopOf="@+id/txvClientName"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/txvprobando" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/txtId"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/txvClientName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="25dp"
-        android:layout_marginBottom="59dp"
+        android:layout_marginStart="33dp"
         android:text="Nombre de cliente"
-        app:layout_constraintBottom_toTopOf="@+id/txtBirthDate"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txtClientName"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/txvBirthDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="33dp"
-        android:layout_marginBottom="49dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginBottom="63dp"
         android:text="Fecha de nacimiento"
         app:layout_constraintBottom_toTopOf="@+id/txtDateOfAdmission"
+        app:layout_constraintEnd_toStartOf="@+id/txtBirthDate"
+        app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/txvDateOfAdmission"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="33dp"
-        android:layout_marginBottom="64dp"
+        android:layout_marginStart="34dp"
         android:text="Fecha de ingreso"
-        app:layout_constraintBottom_toTopOf="@+id/txtEmail"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txtDateOfAdmission"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -63,21 +51,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="33dp"
-        android:layout_marginBottom="192dp"
         android:text="Correo"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txtEmail"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/txtId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="44dp"
         android:ems="10"
         android:hint="digite su identidad"
         android:inputType="number"
         android:minHeight="48dp"
-        app:layout_constraintBottom_toBottomOf="@+id/txvId"
-        app:layout_constraintStart_toEndOf="@+id/txvId" />
+        app:layout_constraintStart_toEndOf="@+id/txvId"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/txtClientName"
@@ -88,8 +77,8 @@
         android:hint="Escriba su Nombre"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        app:layout_constraintBottom_toBottomOf="@+id/txvClientName"
-        app:layout_constraintStart_toEndOf="@+id/txvClientName" />
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintEnd_toStartOf="@+id/imageView2" />
 
     <EditText
         android:id="@+id/txtBirthDate"
@@ -99,7 +88,8 @@
         android:hint="Ingrese su fecha de nacimiento"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        app:layout_constraintBottom_toBottomOf="@+id/txvBirthDate"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txvBirthDate"
+        app:layout_constraintEnd_toStartOf="@+id/imageView3"
         app:layout_constraintStart_toEndOf="@+id/txvBirthDate" />
 
     <EditText
@@ -110,37 +100,92 @@
         android:hint="Escriba su fecha de registro"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        app:layout_constraintBottom_toBottomOf="@+id/txvDateOfAdmission"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
         app:layout_constraintStart_toEndOf="@+id/txvDateOfAdmission" />
 
     <EditText
         android:id="@+id/txtEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="202dp"
+        android:layout_marginBottom="204dp"
         android:ems="10"
         android:hint="escriba su correo institucional"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        app:layout_constraintBottom_toBottomOf="@+id/txvEmail"
-        app:layout_constraintStart_toEndOf="@+id/txvEmail" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txvEmail"
+        app:layout_constraintTop_toBottomOf="@+id/txvBirthDate" />
 
     <Button
         android:id="@+id/btnGuardarCliente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="25dp"
+        android:layout_marginStart="62dp"
         android:text="Guardar"
         app:layout_constraintBaseline_toBaselineOf="@+id/btnVisualize"
-        app:layout_constraintStart_toStartOf="@+id/txvEmail" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btnVisualize"
-        android:layout_width="129dp"
+        android:layout_width="0dp"
         android:layout_height="48dp"
         android:layout_marginStart="26dp"
         android:layout_marginTop="31dp"
+        android:layout_marginEnd="26dp"
         android:text="Visualizar"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
         app:layout_constraintStart_toEndOf="@+id/btnGuardarCliente"
         app:layout_constraintTop_toBottomOf="@+id/txtEmail" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtId"
+        app:layout_constraintStart_toEndOf="@+id/txtId"
+        app:srcCompat="@drawable/clientid" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="160dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="159dp"
+        app:layout_constraintBottom_toTopOf="@+id/txtDateOfAdmission"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/id" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="258dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtBirthDate"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/fecha" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="66dp"
+        android:layout_marginEnd="29dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        app:srcCompat="@drawable/fecha" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtEmail"
+        app:layout_constraintStart_toEndOf="@+id/txtEmail"
+        app:srcCompat="@drawable/correo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
