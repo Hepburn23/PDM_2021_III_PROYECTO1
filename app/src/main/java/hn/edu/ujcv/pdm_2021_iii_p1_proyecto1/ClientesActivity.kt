@@ -21,7 +21,7 @@ class ClientesActivity : AppCompatActivity() {
 
     fun save() {
         val info = StringBuilder()
-        numero+=1
+        numero += 1
         info.append(txtId.text.toString()).append("")
         info.append(txtClientName.text.toString().trim()).append("")
         info.append(txtBirthDate.text.toString()).append("")
@@ -31,52 +31,54 @@ class ClientesActivity : AppCompatActivity() {
 
         sincampos()
 
-        if (sincampos()== true){
+        if (sincampos() == true) {
             btnGuardarCliente.isEnabled = true
-            Toast.makeText(this,"guardado", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "guardado", Toast.LENGTH_SHORT).show()
 
-            CleanClients()
+            cleanClients()
         }
     }
 
-     fun sincampos() : Boolean {
-        if (txtId.text.toString().isEmpty()){
-            txtId.error ="Campo Requerido"
+    fun sincampos(): Boolean {
+        if (txtId.text.toString().isEmpty()) {
+            txtId.error = "Campo Requerido"
             return false
 
-        }else if (txtClientName.text.toString().isEmpty()){
+        } else if (txtClientName.text.toString().isEmpty()) {
             txtClientName.error = "Campo Requerido"
             return false
 
         }
-        if (txtBirthDate.text.toString().isEmpty()){
-            txtBirthDate.error ="Campo Requerido"
+        if (txtBirthDate.text.toString().isEmpty()) {
+            txtBirthDate.error = "Campo Requerido"
             return false
 
         }
-        if (txtDateOfAdmission.text.toString().isEmpty()){
-            txtDateOfAdmission.error ="Campo Requerido"
+        if (txtDateOfAdmission.text.toString().isEmpty()) {
+            txtDateOfAdmission.error = "Campo Requerido"
             return false
 
         }
-        if (txtEmail.text.toString().isEmpty()){
-            txtEmail.error ="Campo Requerido"
+        if (txtEmail.text.toString().isEmpty()) {
+            txtEmail.error = "Campo Requerido"
             return false
 
         }
-         return true
-
+        return true
     }
-        fun visualizar(){
+
+    fun visualizar() {
         val intent = Intent(this, ClientesPorIdentidadActivity::class.java)
-        intent.putExtra("clientes",clientes)
-            startActivity(intent)
-            //debe traer otra funcion o esquema
-
+        intent.putExtra("clientes", clientes)
+        startActivity(intent)
+        //debe traer otra funcion o esquema
     }
 
-
+    fun cleanClients(){
+        txtId.setText("")
+        txtClientName.setText("")
+        txtBirthDate.setText("")
+        txtDateOfAdmission.setText("")
+        txtEmail.setText("")
     }
-        private fun CleanClients() {
-
 }

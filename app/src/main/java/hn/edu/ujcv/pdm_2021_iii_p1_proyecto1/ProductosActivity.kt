@@ -14,7 +14,6 @@ class ProductosActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_productos)
 
-
         //Handler
         btnSave.setOnClickListener {
             emptyAlert()
@@ -39,6 +38,21 @@ class ProductosActivity : AppCompatActivity() {
 
         Toast.makeText(this,"Datos del Producto Ingresados Correctamente", Toast.LENGTH_SHORT).show()
 
+        /*val codeP = txtCode.text.toString()
+        val nameP = txtName.text.toString()
+        val providerP = txtProvider.text.toString()
+        val priceP = txtPrice.text.toString()
+        val stockP = txtStock.text.toString()
+
+        val intent = Intent(this@ProductosActivity, ProductoPorCodigoActivity::class.java)
+        intent.putExtra("Code", codeP)
+        intent.putExtra("Name", nameP)
+        intent.putExtra("Provider", providerP)
+        intent.putExtra("Price", priceP)
+        intent.putExtra("Stock", stockP)
+
+        startActivity(intent)*/
+
         txtCode.setText("")
         txtName.setText("")
         txtProvider.setText("")
@@ -60,9 +74,5 @@ class ProductosActivity : AppCompatActivity() {
                 startActivity(intent)
             }
         }
-    }
-
-    fun cleantxt(){
-
     }
 }
